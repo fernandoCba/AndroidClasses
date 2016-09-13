@@ -3,6 +3,7 @@ package famaf.unc.edu.ar.activitiesassignment;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
@@ -29,6 +30,7 @@ public class LoginActivity extends AppCompatActivity  {
      * Keep track of the login task to ensure we can cancel it if requested.
      */
     private UserLoginTask mAuthTask = null;
+    final public static String USERNAME = "ar.edu.unc.famaf.USERNAME";
 
     // UI references.
     private AutoCompleteTextView mEmailView;
@@ -210,6 +212,10 @@ public class LoginActivity extends AppCompatActivity  {
             showProgress(false);
 
             if (success) {
+                String[] parts = mEmail.split("@");
+                Intent intent=new Intent();
+                intent.putExtra(LoginActivity.USERNAME,parts[0]);
+                setResult(NewsActivity.LOGIN_REQUEST,intent);
                 finish();
             } else {
                 mPasswordView.setError(getString(R.string.error_incorrect_password));
