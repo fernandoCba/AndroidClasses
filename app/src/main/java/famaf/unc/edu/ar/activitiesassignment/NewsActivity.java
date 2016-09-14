@@ -15,7 +15,7 @@ import android.view.View;
 import android.widget.TextView;
 
 public class NewsActivity extends AppCompatActivity {
-    static final int LOGIN_REQUEST = 1;
+    static final int LOGIN_REQUEST = 1000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,11 +58,10 @@ public class NewsActivity extends AppCompatActivity {
                     getSupportFragmentManager().findFragmentById(R.id.news_activity_fragment_id);
             TextView textView = (TextView) findViewById(R.id.loginStatusTextView);
 
-            if(true || resultCode == Activity.RESULT_OK) { //HELP HERE!
+            if (resultCode == Activity.RESULT_OK) {
                 String userName = data.getStringExtra(LoginActivity.USERNAME);
                 textView.setText("User " + userName + " logged in");
-            }
-            else
+            } else
                 textView.setText("User is not logged in");
         }
     }

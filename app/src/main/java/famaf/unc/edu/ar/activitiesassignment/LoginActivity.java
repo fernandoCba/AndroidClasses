@@ -3,6 +3,7 @@ package famaf.unc.edu.ar.activitiesassignment;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
+import android.app.Activity;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Build;
@@ -215,7 +216,7 @@ public class LoginActivity extends AppCompatActivity  {
                 String[] parts = mEmail.split("@");
                 Intent intent=new Intent();
                 intent.putExtra(LoginActivity.USERNAME,parts[0]);
-                setResult(NewsActivity.LOGIN_REQUEST,intent);
+                setResult(Activity.RESULT_OK,intent);
                 finish();
             } else {
                 mPasswordView.setError(getString(R.string.error_incorrect_password));
