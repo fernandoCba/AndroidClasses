@@ -25,7 +25,9 @@
         android:text="r/todayilearned"
 
 
-        />
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/news_icon"
+        android:layout_toEndOf="@+id/news_icon" />
 
     <TextView
         android:id="@+id/timespanContent"
@@ -33,24 +35,30 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         
-        android:text="Hace 4h"/>
+        android:text="Hace 4h"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/next_content_img"
+        android:layout_toStartOf="@+id/next_content_img" />
 
 
     <TextView
         android:id="@+id/news_content"
-        android:layout_width="160dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
         android:textSize="@dimen/news_content"
         android:layout_toRightOf="@id/news_icon"
-        android:layout_below="@id/timespanContent"/>
+        android:layout_below="@id/timespanContent"
+        android:layout_alignRight="@+id/timespanContent"
+        android:layout_alignEnd="@+id/timespanContent" />
 
     <ImageButton
         android:id="@+id/comments_icon"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
         android:layout_below="@id/news_content"
         android:layout_toRightOf="@id/news_icon"
+        android:background="@android:color/transparent"
         android:src="@android:drawable/sym_action_chat" />
 
     <TextView
@@ -65,11 +73,12 @@
          />
 
     <ImageButton
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:id="@+id/next_content_img"
-        android:layout_toRightOf="@id/news_content"
+        android:layout_alignParentRight="true"
         android:layout_alignBaseline="@id/news_content"
+        android:background="@android:color/transparent"
         android:src="@drawable/play_gray_icon" />
 
     <TextView
