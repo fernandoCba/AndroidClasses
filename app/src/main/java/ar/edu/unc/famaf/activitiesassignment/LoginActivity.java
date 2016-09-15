@@ -1,4 +1,4 @@
-package famaf.unc.edu.ar.activitiesassignment;
+package ar.edu.unc.famaf.activitiesassignment;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -21,6 +21,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import java.util.List;
+
+import famaf.unc.edu.ar.activitiesassignment.R;
 
 /**
  * A login screen that offers login via email/password.
