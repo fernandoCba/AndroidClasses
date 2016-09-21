@@ -15,6 +15,7 @@
         android:id="@+id/news_icon"
         android:layout_width="80dp"
         android:layout_height="80dp"
+        android:layout_margin="10dp"
         android:src="@drawable/reddit_icon"/>
 
     <TextView
@@ -23,8 +24,6 @@
         android:layout_height="wrap_content"
         android:textSize="@dimen/news_upper_content"
         android:text="r/todayilearned"
-
-
         android:layout_alignParentTop="true"
         android:layout_toRightOf="@+id/news_icon"
         android:layout_toEndOf="@+id/news_icon" />
@@ -45,7 +44,7 @@
         android:id="@+id/news_content"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+        android:text="Lorem ipsum dolor sit amet,tetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit"
         android:textSize="@dimen/news_content"
         android:layout_toRightOf="@id/news_icon"
         android:layout_below="@id/timespanContent"
@@ -73,13 +72,16 @@
          />
 
     <ImageButton
+        android:id="@+id/next_content_img"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/next_content_img"
-        android:layout_alignParentRight="true"
-        android:layout_alignBaseline="@id/news_content"
         android:background="@android:color/transparent"
-        android:src="@drawable/play_gray_icon" />
+        android:src="@drawable/next_icon"
+        android:layout_below="@+id/timespanContent"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="20dp" />
 
     <TextView
         android:id="@+id/loginStatusTextView"
