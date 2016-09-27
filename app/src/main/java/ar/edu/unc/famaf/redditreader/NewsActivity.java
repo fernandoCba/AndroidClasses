@@ -1,4 +1,4 @@
-package ar.edu.unc.famaf.activitiesassignment;
+package ar.edu.unc.famaf.redditreader;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -10,7 +10,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.TextView;
 
-import famaf.unc.edu.ar.activitiesassignment.R;
+import famaf.unc.edu.ar.redditreader.R;
 
 public class NewsActivity extends AppCompatActivity {
     static final int LOGIN_REQUEST = 1000;
